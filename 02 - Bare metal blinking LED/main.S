@@ -13,7 +13,7 @@
 .global _start
 
 @ Vector table
-.word               0x20001000      @ Vector #0 - Stack pointer init value (0x20000000 is RAM address and 0x1000 is 4kB size, stack grows "downwards")
+.word               0x20001000		@ Vector #0 - Stack pointer init value (0x20000000 is RAM address and 0x1000 is 4kB size, stack grows "downwards")
 .word               _start			@ Vector #1 - Reset vector - where the code begins
 									@ Vector #3..#n - I don't use Systick and another interrupts right now
 									@				so it is not necessary to define them and code can start here
