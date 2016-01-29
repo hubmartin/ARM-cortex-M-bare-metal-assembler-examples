@@ -20,6 +20,7 @@
 
 .thumb_func				@ Force the assembler to call this function in Thumb mode, that means the least significant bit in address is set
 						@ Using this bit, the ARM core knows whether is jumping to the ARM or Thumb code, Cortex supports only Thumb
+						@ Also you can use ".type	_start, %function"
 _start:
 
     @ Enable clock for GPIOC peripheral in RCC registers
