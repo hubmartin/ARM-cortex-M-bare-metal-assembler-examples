@@ -1,6 +1,7 @@
 
 .thumb
 
+@ Register addresses from STM32F0 reference manual
 .equ PERIPH_BASE,           (0x40000000)
 .equ AHBPERIPH_BASE,        (PERIPH_BASE + 0x00020000)
 .equ AHB2PERIPH_BASE,		(PERIPH_BASE + 0x08000000)
@@ -28,7 +29,7 @@ _start:
    
     @ Enable GPIOC pin 9 as output
     LDR r0, =(GPIOC_BASE + 0x00)
-    LDR r1, =(1 << (9*2))
+    LDR r1, =(1 << (9*2))	@ Every bin has 2 bit settings, hence *2
     STR r1, [r0]     @Store R0 value to r1
    
 
